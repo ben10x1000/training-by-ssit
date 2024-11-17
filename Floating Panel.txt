@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Floating Panel Try </title>
+<style>
+    .Floating {
+        position: relative;
+        width: 90%;
+        padding: 20px;
+        max-width: 200px;
+        max-height: 250px;
+        background: #910f9b;
+        border-radius: 5px;
+        color: white;
+        transition: all .3sec ease;
+        animation: float 2.5s ease-in-out;
+    }
+    .cover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        background: #fecd92;
+        transition: all .5sec ease;
+        clip-path: circle(12% at 0px 0px);
+        display: flex;
+        color: #320d3e;
+        justify-content: center;
+        align-items: center;
+    }
+
+.Floating:hover .cover{
+    cursor: pointer;
+    clip-path: circle(75%);
+}
+@keyframes float{
+    0%{
+        transform: translateY(0);
+        box-shadow: 0 45px 25px -15px #00000050;
+    }
+    50%{
+        transform: translateY(-5px);
+        box-shadow: 0 50px 40px -15px #00000050;
+    }
+    100%{
+        transform: translateY(0);
+        box-shadow: 0 45px 25px -15px #00000050;
+    }
+}
+
+
+
+
+</style>
+
+
+</head>
+<body>
+<div class="Floating">
+    <div class="cover">
+        <h2>Hello</h2>
+    </div>
+    <h2>Floating Panel</h2>
+    <p>
+        this is just a text and nothing to do the actual concept.
+    </p>
+</div>
+
+</body></html>
